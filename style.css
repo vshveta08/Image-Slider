@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(4, 8, 25);
+}
+#wrapper{
+    max-width: 1200px;
+    width: 85%;
+}
+#container{
+    display: flex;
+    align-items: center;
+}
+#container .image-slider{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 15px;
+    
+    /* the x-slide bar goes to at images using overflow x  */
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+/* to hide scrollbar, but scrolling will be happen and create custom scroll bar */
+#container .image-slider::-webkit-scrollbar{
+    display: none;
+}
+#container .image-slider .image{
+    width: 370px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.slide-button{
+    width: 140px;
+    height: 350px;
+    background-color: rgb(122, 150, 162);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 
+    inset 5px 5px 8px rgb(48, 48, 48),
+    inset -5px -5px 8px rgb(245, 245, 245);
+    border-radius: 1px;
+    color: rgb(1, 16, 69);
+    scroll-behavior: smooth;
+}
+.slide-button:active{
+    box-shadow: 
+    inset 3px 3px 6px rgb(198, 198, 198),
+    inset -3px -3px 6px rgb(99, 98, 98);
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(10, 10, 10, 0.9); /* Black w/ opacity */
+  
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  height: 80%;
+}
+
+/* The Close Button */
+#close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#close:hover,
+#close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+/* responsive */
+@media (max-width: 970px){
+  #container .image-slider .image{
+    width: 300px;
+    height: 230px;
+  }
+  .slide-button{
+    height: 280px;
+  }
+}
+
+@media (max-width: 800px){
+  #container .image-slider .image{
+    width: 250px;
+    height: 180px;
+  }
+  .slide-button{
+    height: 220px;
+  }
+}

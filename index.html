@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- file for left and right button -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <button id="prev-slide" class="slide-button material-symbols-rounded" style="font-size:2.1rem; font-weight: bolder;">
+                chevron_left
+            </button>
+            <div class="image-slider">
+                <img src="./Images/img1.jpg" class="image" alt="">
+                <img src="./Images/img2.jpg" class="image" alt="">
+                <img src="./Images/img3.jpg" class="image" alt="">
+                <img src="./Images/img4.jpg" class="image" alt="">
+                <img src="./Images/img5.jpg" class="image" alt="">
+                <img src="./Images/img6.jpg" class="image" alt="">
+                <img src="./Images/img7.jpg" class="image" alt="">
+                <img src="./Images/img8.jpg" class="image" alt="">
+                <img src="./Images/img9.jpg" class="image" alt="">
+                <img src="./Images/img10.jpg" class="image" alt="">
+                <img src="./Images/img11.jpg" class="image" alt="">
+                <img src="./Images/img12.jpg" class="image" alt="">
+                <img src="./Images/img13.jpg" class="image" alt="">
+                <img src="./Images/img14.jpeg" class="image" alt="">
+                <img src="./Images/img15.jpg" class="image" alt="">
+            </div>
+            <button id="next-slide" class="slide-button material-symbols-rounded" style="font-size:2.1rem; font-weight: bolder;">
+                chevron_right
+            </button>
+        </div>
+    </div>
+
+
+    <!-- The Modal to show full img -->
+    <div id="myModal" class="modal">
+        <span id="close">&times;</span>
+        <img class="modal-content" id="fullImg">
+      </div>
+    </div>
+
+    <!-- link script file -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
